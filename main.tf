@@ -8,6 +8,8 @@ terraform {
 }
 
 provider "render" {
+  api_key = var.render_api_key    // Uses env.RENDER_API_KEY, if not supplied
+  email = var.render_email // Uses env.RENDER_EMAIL, if not supplied
 }
 
 resource "render_service" "airbyte" {
