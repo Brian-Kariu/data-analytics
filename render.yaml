@@ -7,7 +7,6 @@ services:
     plan: free # optional (defaults to starter instance type)
     branch: master # optional (defaults to master)
     rootDir: orchestration/
-    dockerCommand: "docker build -t mage-ai ." # optional (defaults to Dockerfile command)
   # Airbyte service
   - type: web
     name: airbyte
