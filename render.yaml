@@ -1,9 +1,9 @@
+previewsEnabled: true
 services:
   # A Docker web service
   - type: web
     name: mage-ai
     runtime: docker
-    repo: https://github.com/Brian-Kariu/data-analytics/
     region: frankfurt # optional (defaults to oregon)
     plan: free # optional (defaults to starter instance type)
     branch: master # optional (defaults to master)
@@ -13,23 +13,8 @@ services:
   - type: web
     name: airbyte
     runtime: python
-    repo: https://github.com/Brian-Kariu/data-analytics/
     region: frankfurt # optional (defaults to oregon)
     plan: free
     rootDir: infra/airbyte
     buildCommand: "pip install -r requirements.txt" # ensure it's a string
     startCommand: "python3 start.py"
-  
-envVarGroups:
-  - name: conc-settings
-    envVars:
-      - key: CONCURRENCY
-        value: 2
-      - key: SECRET
-        generateValue: true
-      - key: USER_PROVIDED_SECRET
-        sync: false
-  - name: stripe
-    envVars:
-      - key: STRIPE_API_URL
-        value: https://api.stripe.com/v2
