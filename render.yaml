@@ -15,4 +15,4 @@ services:
     plan: free
     rootDir: infra/airbyte
     buildCommand: "pip install -r requirements.txt" # ensure it's a string
-    startCommand: "python3 start.py"
+    startCommand: "python3 entrypoint.py"
