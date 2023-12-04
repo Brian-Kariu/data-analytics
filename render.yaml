@@ -10,7 +10,7 @@ services:
     rootDir: orchestration
     dockerCommand: "docker build -t mage-ai ." # optional (defaults to Dockerfile command)
   # Airbyte service
-  - type: cron
+  - type: web
     name: airbyte
     runtime: python
     repo: https://github.com/Brian-Kariu/data-analytics/
